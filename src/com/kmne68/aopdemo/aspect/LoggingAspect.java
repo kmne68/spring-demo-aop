@@ -19,7 +19,10 @@ public class LoggingAspect {
 	// @Before("execution(public void com.kmne68.aopdemo.dao.AccountDAO.addAccount())")
 	// @Before("execution(public void add*())")
 	// @Before("execution(void add*())")
-	@Before("execution(* add*())")
+	
+	// the following has a return type of "*" and matches on any method that begins with the string "add", 
+	// will match on any number of arguments (..)
+	@Before("execution(* add*(com.kmne68.aopdemo.Account, ..))")
 	public void beforeAddAccountAdvice() {
 		
 		System.out.println("\n======>>> Executing @Before advice on addAccount()");

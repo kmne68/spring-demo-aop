@@ -23,7 +23,8 @@ public class MainDemoApp {
 		
 		
 		// call the business method a second time for demo purposes
-		accountDAO.addAccount();
+		Account account = new Account();
+		accountDAO.addAccount(account, true);
 		
 		
 		// call the membership business method
