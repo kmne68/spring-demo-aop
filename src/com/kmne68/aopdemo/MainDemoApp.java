@@ -25,6 +25,8 @@ public class MainDemoApp {
 		// call the business method a second time for demo purposes
 		Account account = new Account();
 		accountDAO.addAccount(account, true);
+		accountDAO.doWork();
+		accountDAO.goToSleep();
 		
 		
 		// call the membership business method
