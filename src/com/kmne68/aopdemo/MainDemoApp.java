@@ -18,7 +18,7 @@ public class MainDemoApp {
 		// get bean from spring container
 		AccountDAO accountDAO = context.getBean("accountDAO", AccountDAO.class);
 		
-		// get membership bean frmo the spring container
+		// get membership bean from the spring container
 		MembershipDAO membershipDAO = context.getBean("membershipDAO", MembershipDAO.class);
 		
 		
@@ -27,6 +27,7 @@ public class MainDemoApp {
 		accountDAO.addAccount(account, true);
 		accountDAO.doWork();
 		accountDAO.goToSleep();
+		membershipDAO.addMember();
 		
 		
 		// call the membership business method
