@@ -1,5 +1,8 @@
 package com.kmne68.aopdemo.dao;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.stereotype.Component;
 
 import com.kmne68.aopdemo.Account;
@@ -9,6 +12,24 @@ public class AccountDAO {
 
 	private String name;
 	private String serviceCode;
+	
+	
+	public List<Account> findAccounts() {
+		
+		List<Account > accounts = new ArrayList<>();
+		
+		// create sample accounts
+		Account accountOne = new Account("Frodo", "Silver");
+		Account accountTwo = new Account("Sam", "Gold");
+		Account accountThree = new Account("Merry", "Platinum");
+		
+		accounts.add(accountOne);
+		accounts.add(accountTwo);
+		accounts.add(accountThree);
+		
+		
+		return accounts;
+	}
 	
 	
 	public String getName() {
