@@ -8,7 +8,7 @@ import com.kmne68.aopdemo.dao.AccountDAO;
 import com.kmne68.aopdemo.dao.MembershipDAO;
 
 
-public class AfterReturningDemoApp {
+public class AfterThrowingDemoApp {
 	
 
 	public static void main(String[] args) {
@@ -21,10 +21,19 @@ public class AfterReturningDemoApp {
 		AccountDAO accountDAO = context.getBean("accountDAO", AccountDAO.class);
 		
 		// call method to find the accounts
-		List<Account> accounts = accountDAO.findAccounts(false);
+		List<Account> accounts = null;
+		
+		try {
+			// add a boolean flag to simulate exceptions
+			boolean tripWire = true;
+			accounts = accountDAO.findAccounts(tripWire);
+		}
+		catch(Exception e) {
+			System.out.println("\n\nMain Program...caught exception: " + e);
+		}
 		
 		// display the accounts
-		System.out.println("\n\nMain Program: AfterReturningDemoApp");
+		System.out.println("\n\nMain Program: AfterThrowingDemoApp");
 		System.out.println("-----");
 		
 		System.out.println(accounts);

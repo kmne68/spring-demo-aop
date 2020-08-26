@@ -14,7 +14,13 @@ public class AccountDAO {
 	private String serviceCode;
 	
 	
-	public List<Account> findAccounts() {
+	public List<Account> findAccounts(boolean tripWire) {
+		
+		// simulate an exception
+		if(tripWire) {
+			throw new RuntimeException("Not allowed");
+		}
+		
 		
 		List<Account > accounts = new ArrayList<>();
 		
