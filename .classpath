@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="lib/spring-aop-5.2.2.RELEASE-javadoc.jar"/>
 	<classpathentry kind="lib" path="lib/spring-aop-5.2.2.RELEASE-sources.jar"/>
@@ -65,6 +69,7 @@
 	<classpathentry kind="lib" path="lib/spring-websocket-5.2.2.RELEASE-javadoc.jar"/>
 	<classpathentry kind="lib" path="lib/spring-websocket-5.2.2.RELEASE-sources.jar"/>
 	<classpathentry kind="lib" path="lib/spring-websocket-5.2.2.RELEASE.jar"/>
-	<classpathentry kind="lib" path="C:/java/spring-jar-files/aspectjweaver-1.9.5.jar"/>
+	<classpathentry kind="lib" path="lib/aspectjweaver-1.9.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kmne6/git/spring-demo-aop/lib/aspectjweaver-1.9.5.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
