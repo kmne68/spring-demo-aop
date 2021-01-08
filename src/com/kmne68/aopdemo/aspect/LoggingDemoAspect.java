@@ -47,8 +47,8 @@ public class LoggingDemoAspect {
 			// log the exception
 			logger.warning(e.getMessage());
 			
-			// give the user a custom message
-			result = "Major accident! A helicopter is on the way for you.";
+			// rethrow the exception
+			throw e;
 		}
 		
 		// get the ending time stamp
