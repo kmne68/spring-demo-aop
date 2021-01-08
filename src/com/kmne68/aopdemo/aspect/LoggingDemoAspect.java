@@ -38,7 +38,18 @@ public class LoggingDemoAspect {
 		long begin = System.currentTimeMillis();
 		
 		// execute the method
-		Object result = proceedingJoinPoint.proceed();
+		Object result = null;
+		
+		try {
+			result = proceedingJoinPoint.proceed();
+		} catch(Exception e) {
+			
+			// log the exception
+			logger.warning(e.getMessage());
+			
+			// give the user a custom message
+			result = "Major accident! A helicopter is on the way for you.";
+		}
 		
 		// get the ending time stamp
 		long end = System.currentTimeMillis();
